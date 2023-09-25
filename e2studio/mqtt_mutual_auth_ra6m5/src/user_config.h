@@ -1,0 +1,107 @@
+/***********************************************************************************************************************
+ * File Name    : user_config.h
+ * Description  : Contains macros, data structures and functions used  in the Application
+ ***********************************************************************************************************************/
+
+#ifndef USER_CONFIG_H
+#define USER_CONFIG_H
+
+// MQTT Configuration
+#define MQTT_BROKER_ENDPOINT "192.168.1.1"
+#define MQTT_BROKER_HOSTNAME "192.168.1.1"
+#define MQTT_BROKER_PORT 8883
+#define DISABLE_SNI 1
+
+#define CLIENT_IDENTIFIER "CanGateway"
+#define TEST_TOPIC_NAME "testTopic"
+#define SUBSCRIBE_TOPIC "instructionTopic"
+
+#define MAX_RETRY_ATTEMPTS 5
+
+// Configuration for Test
+#define USR_TEST_DOMAIN_NAME "www.freertos.org"
+#define USR_TEST_PING_IP "192.168.1.1"
+#define USR_PING_COUNT 100
+
+// ROOT CA Certificate of MQTT Broker
+#define ROOT_CA_PEM \
+"-----BEGIN CERTIFICATE-----\n" \
+"MIIDszCCApugAwIBAgIUL2unddkaoB8TacSXW9n7m76hZNQwDQYJKoZIhvcNAQEL\n" \
+"BQAwaTELMAkGA1UEBhMCREUxEDAOBgNVBAgMB0JhdmFyaWExEzARBgNVBAcMCklu\n" \
+"Z29sc3RhZHQxDDAKBgNVBAoMA1RISTEPMA0GA1UECwwGQy1FQ09TMRQwEgYDVQQD\n" \
+"DAsxOTIuMTY4LjEuMTAeFw0yMzA5MDEwNzI4MDFaFw0yNDEwMDUwNzI4MDFaMGkx\n" \
+"CzAJBgNVBAYTAkRFMRAwDgYDVQQIDAdCYXZhcmlhMRMwEQYDVQQHDApJbmdvbHN0\n" \
+"YWR0MQwwCgYDVQQKDANUSEkxDzANBgNVBAsMBkMtRUNPUzEUMBIGA1UEAwwLMTky\n" \
+"LjE2OC4xLjEwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCuQalse/uF\n" \
+"Od5DdPUKhNQzGgE1NftNfS0e++Wq36ehTluNUefO4tPbuxQmDLd+4NQRt8YY94qq\n" \
+"1gKyOx7kKZknna8vjdTq1W8ZBLY+WGT8KpVZjacmjcRzAZcRbm992IALtGA4w92A\n" \
+"A0OBMQHm9tY0i3XPm+5ajPmeqDakEPhLLhwdvjaOJe0SdSIxZwZEmUvF9NOlruAz\n" \
+"GDb+iEDG/9469FZvTU2fzs0ZQAtrJRe4RRuliAbiyMK93tRqQLYtxM57DyDNtPi/\n" \
+"+PbhwqZ9vRhCWPnMxw0VGJ/v8O8oWo2zm5v+fSmwyLeSKx8P6FuUS+cWsYyrWyof\n" \
+"WBthvFeyR6UVAgMBAAGjUzBRMB0GA1UdDgQWBBS9571vKWIu/jyJkYX62GpsVKq0\n" \
+"izAfBgNVHSMEGDAWgBS9571vKWIu/jyJkYX62GpsVKq0izAPBgNVHRMBAf8EBTAD\n" \
+"AQH/MA0GCSqGSIb3DQEBCwUAA4IBAQA/SWx+dHSRTSd/Xh7R6LeleGLjIkLLj7hc\n" \
+"GoqVO7Sv09gTriIvg+8n2R1Vsg+K7y9CchxlMs625BNAQ5erZax9GNUhVUvSsMHS\n" \
+"1+XlzBrkqQKF9v7bvaDvd31MCbNLdE3Bx3NECl1o0TyttEFkkWK2+5qPRjDuhUMR\n" \
+"W2ieQ41FJKpZUIlXVVnzwdPZLt/uOS814/Ib+ss0M6Sqa0vo/iMZaUm0Q/7zCrrT\n" \
+"dtinenJxf6khOHUtHroj8P8l9fB5Y/gu06cc0JJCJBYykDrnwE/eUWe9Jnt2alNs\n" \
+"EVKiZj3jsG0DD/37lGZMnZHaa8Xe32rSfkLdqFd3a2HaPvGE3/n+\n" \
+"-----END CERTIFICATE-----"
+
+// Client Certificate
+#define CLIENT_CERTIFICATE_PEM \
+"-----BEGIN CERTIFICATE-----\n" \
+"MIIDuTCCAqGgAwIBAgIUfA5WxiNaWxqxtHZNelhcbS7zs1UwDQYJKoZIhvcNAQEL\n" \
+"BQAwbDELMAkGA1UEBhMCREUxEDAOBgNVBAgMB0JhdmFyaWExEzARBgNVBAcMCklu\n" \
+"Z29sc3RhZHQxDDAKBgNVBAoMA1RISTEPMA0GA1UECwwGQy1FQ09TMRcwFQYDVQQD\n" \
+"DA5jYW5tcXR0Z2F0ZXdheTAeFw0yMzA5MDUxNTE1MTRaFw0yNDA5MDQxNTE1MTRa\n" \
+"MGwxCzAJBgNVBAYTAkRFMRAwDgYDVQQIDAdCYXZhcmlhMRMwEQYDVQQHDApJbmdv\n" \
+"bHN0YWR0MQwwCgYDVQQKDANUSEkxDzANBgNVBAsMBkMtRUNPUzEXMBUGA1UEAwwO\n" \
+"Y2FubXF0dGdhdGV3YXkwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDG\n" \
+"AToZLqAKN4e2TL3JcEAQhdVgClKLnA4LL2QVkTo2sNa3nlXpSk1fvb+AiQKX6HX/\n" \
+"aAdsGqJR6osCCXMh6p3vHUsCNmFrsGUU3ngtVXhRe5//G7YK5oOlCEVmrR99t7lx\n" \
+"+KBfZdUtXJU1NN/KnCSeC+BxkHpa5flHm8lQMeVkVWRsV4D1j1nlqxvufXBHIH18\n" \
+"1qw44/W9UJB6zg9cvZhZzB4UY2yBGxU0LTIgDmNiwMxmEnyHorEfZBnLx6PM8uUS\n" \
+"j6wV2uH9fcFQRT61R29G34z+5DRvgDd5xfSISTSsN7AmehDpaMFPfj+EvxZnvlCg\n" \
+"0RzRMnxHa953cLvB2yFlAgMBAAGjUzBRMB0GA1UdDgQWBBSQn1BEVw/3dyE/pnYU\n" \
+"9O8TxD0N7zAfBgNVHSMEGDAWgBSQn1BEVw/3dyE/pnYU9O8TxD0N7zAPBgNVHRMB\n" \
+"Af8EBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQBWWi9nAtyrtyxLF6tfdglCMOg5\n" \
+"f2aj5lnk4GOUZY2tG5fHH82K4RtPfwJxvH9AXTfGFDBy9Ab10OnMFUybd7aVc6KW\n" \
+"FtSvBTQaF9Ot8FXKKdNUyGX2wI5yClJuj2lbscT+880uQAHuipfKW8HR6WM/KnEk\n" \
+"HFHh3u0T+j6upAqI7WYV9AV/rTS4DKtOBEbuqVMvvqpKw8c3CYhaC2BI3DIsAUwX\n" \
+"StqseoLpWg9ShIS62avUXCICMvinHoYeRY2GPq9jW/LF+m7FO7PgtiHQ8gh6WhWA\n" \
+"3zRPEHq8IQ6Y+HLh5Ah2NAxJc6lLUyULtvfQo7rLuz6KhsfdF9j9ImIjWbjD\n" \
+"-----END CERTIFICATE-----\n"
+
+// Client Key
+#define CLIENT_KEY_PEM \
+"-----BEGIN PRIVATE KEY-----\n" \
+"MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDGAToZLqAKN4e2\n" \
+"TL3JcEAQhdVgClKLnA4LL2QVkTo2sNa3nlXpSk1fvb+AiQKX6HX/aAdsGqJR6osC\n" \
+"CXMh6p3vHUsCNmFrsGUU3ngtVXhRe5//G7YK5oOlCEVmrR99t7lx+KBfZdUtXJU1\n" \
+"NN/KnCSeC+BxkHpa5flHm8lQMeVkVWRsV4D1j1nlqxvufXBHIH181qw44/W9UJB6\n" \
+"zg9cvZhZzB4UY2yBGxU0LTIgDmNiwMxmEnyHorEfZBnLx6PM8uUSj6wV2uH9fcFQ\n" \
+"RT61R29G34z+5DRvgDd5xfSISTSsN7AmehDpaMFPfj+EvxZnvlCg0RzRMnxHa953\n" \
+"cLvB2yFlAgMBAAECggEAX3F+9l2FsncS+Vpjj2KG1xAUCv/ey0IVeOnGpijDdVJn\n" \
+"pcnyYoo44sIdudERSXU5z7vu+/qYrMDQcdJpR3uG1ph5rB7XdefoyZb1OfD9ltVv\n" \
+"CbLrXLTB1z616WjhCaISh3APqfx1tjBvEd8jUtBSTEawUT2R5Rf+wbhD4V6z0tkG\n" \
+"F44l8xEpJx8LLrrm5tpVektcnvyJC/GTQlAh1qzVXsKYaAwCEwTHkfhRHNugLHxk\n" \
+"gEcZJhqk+DtCw12yAH+aARBoT351ylHwk/YmkaHUq//NpusZfjt9rw7610KL+cm9\n" \
+"TIqLT77tSaWNKT/QBFSsSTT9/esmubuzU479baV67wKBgQDIl4dJdPEMRSpQEq6C\n" \
+"iRkeF/1SDZp9M8Agopr4UTZDicHs6+nUTiKP0ogflqEDIv8gEFj6OZAAB5SGS9wB\n" \
+"9bT1boZn+RyKGpI77TyNfV3xZ2RfDJ+N7ILQYLtnyA8cq196P/5AbL8y7H/0wu6k\n" \
+"TJDwt78dTlSDJqXVhWhwRWuYnwKBgQD8ssFuevDalqz/4t/CTeygs1zw2b4Cih5K\n" \
+"YcwZTbCeihSxbSiZ4WJHFQqbaTaN3jEEpcrfLQHtvPI7UG3U1fgEcATtc7wNPKRv\n" \
+"qmnfIbZ59t1WoRM8GnPFJy1CP1/7D/ClhLjLw6L85XKx9ZfSsGCEI5W68k3RvKMA\n" \
+"jU0CpAsTewKBgQC6LQHQ6OwNYmiqVxyHZW3do5Bnxt57lDufTqydCutddg96sV+e\n" \
+"wEKN0G6tOuYIfkPi46lh3WlMzbxJhUEWxJGHNmUjPXACsjTF0CPigthdhYQAQDwa\n" \
+"wsiLVSy7X1C/YEPGuHxoGUbAogcFCqPp9HKWKUUFkz0XWRiT/DV59sStqwKBgDoo\n" \
+"PcJagxIbuWcO5OaIHpyBizNXOZbGCOCfj2SHb82dA9QtxjlcGM05N367ATY3W9qw\n" \
+"+XbRme8IHEuwYAaq0/DZgxjPGQmG2mVkuAcFcESznw8v9QhRIjHOqWjkwwc6DO1b\n" \
+"FVi4BsvjVrlER5PSyfO/aNdkqqpJms4mtwGTlYT/AoGAIsIsz14/16XgfJe3jdZ4\n" \
+"TAQauyLQJHgqEDISww/K8C1uTM7yFNrfDgo8S/ksY20EMFkqP2vvgJoStO/ZyVZG\n" \
+"2ZzEvJz5sE/wFT3RyiJfOHYea/jQecQhRvM+ANM7LQZCbO0txuA2pG25z/CQ/0BU\n" \
+"Qufv/3mks6S43yi68LMcdMs=\n" \
+"-----END PRIVATE KEY-----\n"
+
+#endif /* USER_CONFIG_H */

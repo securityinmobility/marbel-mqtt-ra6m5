@@ -1,0 +1,17 @@
+collapse/module.arm.mbed.littlefs.494652224=false
+collapse/module.arm.mbedtls.930426171=false
+collapse/module.aws.coreMqttLib.1407059076=false
+collapse/module.aws.freertos.dev_mode_key_provisioning_mbed_transport_interface.1361800197=false
+collapse/module.aws.freertosplus.crypto.1520133079=false
+collapse/module.aws.freertosplus.freertosplus_tcp.620820962=false
+collapse/module.aws.pkcs11.mbedtls.356169557=false
+collapse/module.aws.sockets_wrapper.tcp.1883048470=false
+collapse/module.aws.transport_interface.mbedtls_pkcs11.170526982=false
+collapse/module.driver.ether_on_ether.893349099=false
+collapse/module.driver.freertos_plus_tcp_on_ether.378729119=false
+collapse/module.driver.psa_crypto.2146186538=false
+collapse/module.driver.rm_aws_pkcs11_pal_littlefs.717524270=false
+collapse/module.driver.rm_psa_crypto.2094356519=false
+collapse/module.driver.sce9.plaintext.1388829283=false
+collapse/module.middleware.rm_littlefs.1267229087=false
+eclipse.preferences.version=1

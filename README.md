@@ -1,5 +1,16 @@
 # TLS MQTT Client for RA6M5
 
+## How to build the project correctly
+Due to some needed changes in the library, some files needed to be changed. These changes are not considered by the e2studios code generation. Therefore, the following needs to be done.
+1. make sure e2studio is set to FSP 4.4.0
+2. open e2studio and generate the code
+3. open the project folder `e2studio/mqtt_mutual_auth_ra6m5`
+4. copy the folder `ra` from the `changed-libaries` folder into the `e2studio/mqtt_mutual_auth_ra6m5` folder
+5. If asked replace the files.
+6. Build the project
+
+<b>Important!</b> Steps 3-6 need to be done every time the code is generated.
+
 ## Broker Configuration
 
 Mosquitto running on Ubuntu 22.04 VM

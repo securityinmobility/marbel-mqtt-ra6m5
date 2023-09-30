@@ -59,7 +59,12 @@ dkms.conf
 *.log
 history.index
 
-Debug/
+# e2config folders
+e2studio/mqtt_mutual_auth_ra6m5/ra/
+e2studio/mqtt_mutual_auth_ra6m5/ra_cfg/
+e2studio/mqtt_mutual_auth_ra6m5/ra_gen/
+e2studio/mqtt_mutual_auth_ra6m5/.settings/
+e2studio/mqtt_mutual_auth_ra6m5/Debug/
 
 # vscode
 .vscode/

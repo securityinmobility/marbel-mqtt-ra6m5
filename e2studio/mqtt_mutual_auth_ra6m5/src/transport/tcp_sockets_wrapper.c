@@ -244,7 +244,7 @@ int32_t TCP_Sockets_Send( Socket_t xSocket,
     configASSERT( xSocket != NULL );
     configASSERT( pvBuffer != NULL );
 
-    xSendStatus = FreeRTOS_send( xSocket, pvBuffer, xBufferLength);
+    xSendStatus = FreeRTOS_send( xSocket, pvBuffer, xBufferLength, 0);
 
     switch( xSendStatus )
     {

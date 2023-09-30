@@ -153,7 +153,7 @@ long int plaintext_send(NetworkContext_t * pNetworkContext, const void * pBuffer
         sendStatus = -1;
     }else {
         // Try to send Data
-        sendStatus = FreeRTOS_send((pNetworkContext->netSocket), pBuffer, bytesToSend);
+        sendStatus = FreeRTOS_send((pNetworkContext->netSocket), pBuffer, bytesToSend, 0);
         if(sendStatus > 0)
         {
             //APP_PRINT("Successfully Sent %d Bytes\r\n", sendStatus);

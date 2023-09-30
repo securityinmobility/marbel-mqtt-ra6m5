@@ -2,14 +2,16 @@
 
 ## How to build the project correctly
 Due to some needed changes in the library, some files needed to be changed. These changes are not considered by the e2studios code generation. Therefore, the following needs to be done.
-1. make sure e2studio is set to FSP 4.4.0
-2. open e2studio and generate the code
-3. open the project folder `e2studio/mqtt_mutual_auth_ra6m5`
-4. copy the folder `ra` from the `changed-libaries` folder into the `e2studio/mqtt_mutual_auth_ra6m5` folder
-5. If asked replace the files.
-6. Build the project
+1. open e2studio 
+2. create a workspace and import the project using the "existing project into workspace" option
+3. make sure e2studio is set to FSP version 4.4.0
+4. open configuration.xml and generate the code
+5. open the project folder in your file explorer `e2studio/mqtt_mutual_auth_ra6m5`
+6. copy the folder `ra` from the `changed-libaries` folder into the `e2studio/mqtt_mutual_auth_ra6m5` folder
+7. If asked replace the files
+8. Build the project
 
-<b>Important!</b> Steps 3-6 need to be done every time the code is generated.
+<b>Important!</b> Steps 5-8 need to be done every time the code is generated.
 
 ## Broker Configuration
 
